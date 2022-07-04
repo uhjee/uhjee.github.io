@@ -200,8 +200,8 @@
       margin-left: 0;
     }
   }
-  
-  img{
+
+  img {
     -webkit-transition: none;
     transition: none;
   }
@@ -238,7 +238,7 @@
       position: relative;
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         bottom: 0;
@@ -288,7 +288,7 @@
     }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: -11px;
       right: 10px;
@@ -301,7 +301,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: -10px;
       right: 10px;
@@ -342,7 +342,7 @@
   margin-top: 1em;
   margin-bottom: 1.5em;
 
-  input[type="checkbox"],
+  input[type='checkbox'],
   label {
     display: none;
   }
@@ -364,7 +364,7 @@
 
       &:before,
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         right: 1em;
         top: 1.25em;
@@ -477,7 +477,6 @@
     font-size: $type-size-6;
   }
 
-
   @include breakpoint(max-width $large - 1px) {
     position: relative;
     max-height: 0;
@@ -522,7 +521,6 @@
   font-weight: 600;
 }
 
-
 /*
      Table of contents navigation
      ========================================================================== */
@@ -530,13 +528,13 @@
 .toc {
   font-family: $sans-serif-narrow;
   color: $text-color;
-  background-color:$background-color;
+  background-color: $background-color;
   border-radius: $border-radius;
   padding: 0.5em 0.5em 0.5em 0.5em;
 
   .nav__title {
     /* change Right Navigation title 'On this page' color */
-    color: rgb(54, 54, 54);
+    color: rgb(111, 110, 110);
     font-size: $type-size-6;
     background: inherit;
     border-top-left-radius: $border-radius;
@@ -547,6 +545,7 @@
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
     @include yiq-contrasted($active-color);
+    color: $text-color;
   }
 }
 
@@ -564,7 +563,7 @@
   a {
     display: block;
     padding: 0.25rem 0.75rem;
-    color: $text-color;
+    color: #777;
     font-weight: 400;
     line-height: 1.5;
     border-bottom: 1.5px solid rgba($primary-color, 0.3);
@@ -593,6 +592,6 @@
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }

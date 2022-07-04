@@ -23,7 +23,7 @@ name: "uhjee"
 description: "uhjee Devlog"
 url: "https://uhjee.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
-repository: "uhjee/uhjee.github.io"
+repository: "uhjee/blog-comments"
 teaser: #
 # logo                     : "/assets/images/meee.svg"
 #"/assets/images/monster.png"
