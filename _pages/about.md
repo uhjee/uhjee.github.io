@@ -6,7 +6,7 @@ comments: false
 ---
 
 <div>
-    <img src="/assets/images/avthm.jpg" alt="about_meee" width="70%" min-width="700px" itemprop="image">
+    <img src="../assets/images/me_photo.jpeg" alt="about_meee" width="70%" min-width="700px" itemprop="image">
 </div>
 
 
@@ -34,4 +34,3 @@ comments: false
         </li>
     </ul>
   </div>
-
