@@ -1,9 +1,9 @@
 ---
-title: "UI/UX"
+title: "Etc"
 layout: category
-permalink: /categories/ui-ux/
+permalink: /categories/etc/
 author_profile: true
-taxonomy: UI/UX
+taxonomy: Etc
 sidebar:
   nav: "categories"
 ---

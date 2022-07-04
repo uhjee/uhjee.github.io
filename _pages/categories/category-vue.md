@@ -1,9 +1,9 @@
 ---
-title: "Templates"
+title: "Vue"
 layout: category
-permalink: /categories/templates/
+permalink: /categories/vue/
 author_profile: true
-taxonomy: Templates
+taxonomy: Vue
 sidebar:
   nav: "categories"
 ---

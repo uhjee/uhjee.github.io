@@ -1,9 +1,9 @@
 ---
-title: "Python"
+title: "React"
 layout: category
-permalink: /categories/python/
+permalink: /categories/react/
 author_profile: true
-taxonomy: Python
+taxonomy: react
 sidebar:
   nav: "categories"
 ---

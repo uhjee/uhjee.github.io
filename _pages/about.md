@@ -1,5 +1,5 @@
 ---
-title: "Hi all! I'm uhjee"
+title: "I'm uhjee. I'm happy."
 permalink: /about/
 layout: single
 comments: false
@@ -16,7 +16,7 @@ comments: false
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">  Seoul, Korea</span>
         </li>
         <li>
-          <a href="https://github.com/choiiis" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://github.com/uhjee" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">  https://github.com/uhjee</span>
           </a>
         </li>
@@ -27,7 +27,7 @@ comments: false
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/choiiis.dev/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://www.instagram.com/uhjee/" itemprop="sameAs" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">  https://www.instagram.com/uhjee/</span>
           </a>
         </li>
