@@ -12,18 +12,18 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "plum" #"plum", "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: 'plum' #"plum", "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale: "ko-KR" #"en-US"
-title: "uhjee Devlog"
-title_separator: "&#124;"
+locale: 'ko-KR' #"en-US"
+title: 'uhjee Devlog'
+title_separator: '&#124;'
 subtitle: # site tagline that appears below site title in masthead
-name: "uhjee"
-description: "uhjee Devlog"
-url: "https://uhjee.github.io"
+name: 'uhjee'
+description: 'uhjee Devlog'
+url: 'https://uhjee.github.io'
 baseurl: # the subpath of your site, e.g. "/blog"
-repository: "uhjee/blog-comments"
+repository: 'uhjee/blog-comments'
 teaser: #
 # logo                     : "/assets/images/meee.svg"
 #"/assets/images/monster.png"
@@ -31,7 +31,7 @@ masthead_title: # overrides the website title displayed in the masthead, use " "
 # breadcrumbs            : false # true, false (default)
 words_per_minute: 200
 comments:
-  provider: "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider: 'utterances' # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -42,8 +42,8 @@ comments:
     num_posts: # 5 (default)
     colorscheme: # "light" (default), "dark"
   utterances:
-    theme: "github-light" # "github-dark"
-    issue_term: "pathname"
+    theme: 'github-light' # "github-dark"
+    issue_term: 'pathname'
   staticman:
     branch: # "master"
     endpoint: # "https://{your Staticman v3 API}/v3/entry/github/"
@@ -87,16 +87,16 @@ social:
 
 # Analytics
 analytics:
-  provider: "google-gtag"
+  provider: 'google-gtag'
   # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id: # google?
-    anonymize_ip: "false" # true, false (default)
+    tracking_id: 'G-XNZQGMVP5X' # google?
+    anonymize_ip: 'false' # true, false (default)
 
 # Site Author
 author:
-  name: "uhjee"
-  avatar: "/assets/images/meee.svg"
+  name: 'uhjee'
+  avatar: '/assets/images/meee.svg'
   #   bio              : "Hamppiness!"
   # location         : "Seoul, Korea"
   # email            : "oper1490@gmail.com"
@@ -123,23 +123,23 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+    - label: 'Twitter'
+      icon: 'fab fa-fw fa-twitter-square'
       # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+    - label: 'Facebook'
+      icon: 'fab fa-fw fa-facebook-square'
       # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+    - label: 'GitHub'
+      icon: 'fab fa-fw fa-github'
       # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
+    - label: 'GitLab'
+      icon: 'fab fa-fw fa-gitlab'
       # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
+    - label: 'Bitbucket'
+      icon: 'fab fa-fw fa-bitbucket'
       # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+    - label: 'Instagram'
+      icon: 'fab fa-fw fa-instagram'
       # url:
 
 # Reading Files
@@ -147,8 +147,8 @@ include:
   - .htaccess
   - _pages
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
+  - '*.sublime-project'
+  - '*.sublime-workspace'
   - vendor
   - .asset-cache
   - .bundle
@@ -176,8 +176,8 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding: 'utf-8'
+markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 
 # Conversion
 markdown: kramdown
@@ -266,7 +266,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: ''
       type: posts
     values:
       layout: single
@@ -277,4 +277,4 @@ defaults:
       # share: true
       related: true
       sidebar:
-        nav: "categories"
+        nav: 'categories'
