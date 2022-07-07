@@ -5,10 +5,10 @@
 /* Colors */
 $background-color: #ffffff !default;
 $text-color: rgb(7, 7, 7) !default;
-$primary-color: #FF6C02 !default;
+$primary-color: #f56b09 !default;
 
 $border-color: mix(#fff, $background-color, 20%) !default;
-$code-background-color:rgba(240, 240, 240, 0.5);
+$code-background-color: rgba(240, 240, 240, 0.5);
 $code-background-color-dark: rgba(185, 185, 185, 0.25) !default;
 
 $mark-highlight-color: rgba($primary-color, 0.15) !default;
@@ -53,7 +53,7 @@ $base0f: #cc6633 !default;
 .author__urls.social-icons i,
 .author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa  {
+.page__footer-follow .social-icons .svg-inline--fa {
   color: inherit;
 }
 

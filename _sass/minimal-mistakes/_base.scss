@@ -15,7 +15,7 @@ body {
   font-family: $global-font-family;
   /* 2022.01.19 change font weight & skew */
   line-height: 1.8;
-	font-weight: 400;
+  font-weight: 400;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -67,7 +67,7 @@ small,
 u,
 ins {
   text-decoration: none;
-  border-bottom: 1px solid $text-color;
+  border-bottom: 2px solid $primary-color;
   a {
     color: inherit;
   }
@@ -126,7 +126,7 @@ blockquote {
     font-style: italic;
 
     &:before {
-      content: "\2014";
+      content: '\2014';
       padding-right: 5px;
     }
   }
@@ -196,11 +196,11 @@ td > code {
   background-color: $code-background-color-dark;
   color: $text-color;
   border-radius: 2px;
-  
+
   &:before,
   &:after {
     letter-spacing: -0.2em;
-    content: "\00a0"; /* non-breaking space*/
+    content: '\00a0'; /* non-breaking space*/
   }
 }
 
@@ -211,7 +211,6 @@ hr {
   margin: 3em 0em 3em 0em;
   border: 0;
   border-top: 1px solid mix($text-color, $background-color, 10%);
-
 }
 
 /* lists */
@@ -313,7 +312,6 @@ figcaption {
   font-family: $menufont;
   font-size: $type-size-5;
 
-
   a {
     -webkit-transition: $global-transition;
     transition: $global-transition;
@@ -395,7 +393,7 @@ a,
 tr,
 td,
 form button,
-input[type="submit"],
+input[type='submit'],
 .btn,
 .highlight,
 .archive__item-teaser {
