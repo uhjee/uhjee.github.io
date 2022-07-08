@@ -19,7 +19,6 @@
   }
 }
 
-
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,7 +27,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .initial-content,
@@ -39,7 +38,7 @@ body {
 .page {
   @include breakpoint($large) {
     float: right;
-    
+
     width: calc(100% - #{$left-sidebar-width-narrow});
     padding-right: $right-sidebar-width-narrow;
     /* 2022.01.19 gap between sidebar and page */
@@ -47,7 +46,6 @@ body {
   }
 
   @include breakpoint($x-large) {
-    
     width: calc(100% - #{$left-sidebar-width});
     padding-right: $right-sidebar-width;
     /* 2022.01.19 gap between sidebar and page */
@@ -79,7 +77,7 @@ body {
 .page__title {
   margin-top: 0;
   line-height: 1.5;
-  font-size: $type-size-3;
+  font-size: $type-size-2;
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -95,27 +93,33 @@ body {
 .page__content {
   font-size: 0.9em;
   font-weight: normal;
+  color: $text-color;
 
   h1 {
     font-weight: bold;
   }
 
-	h1, h2, h3, h4, h5, h6 {
-		.header-link {
-			position: relative;
-			left: 0.5em;
-			opacity: 0;
-			font-size: 0.8em;
-			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
-			-moz-transition: opacity 0.2s ease-in-out 0.1s;
-			-o-transition: opacity 0.2s ease-in-out 0.1s;
-			transition: opacity 0.2s ease-in-out 0.1s;
-		}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    .header-link {
+      position: relative;
+      left: 0.5em;
+      opacity: 0;
+      font-size: 0.8em;
+      -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+      -moz-transition: opacity 0.2s ease-in-out 0.1s;
+      -o-transition: opacity 0.2s ease-in-out 0.1s;
+      transition: opacity 0.2s ease-in-out 0.1s;
+    }
 
-		&:hover .header-link {
-			opacity: 1;
-		}
-	}
+    &:hover .header-link {
+      opacity: 1;
+    }
+  }
 
   /* paragraph indents */
   p {
@@ -134,7 +138,7 @@ body {
     }
 
     &:hover {
-      color: rgba(#000, 0.7);
+      color: rgba($text-color, 0.7);
       img {
         box-shadow: 0 0 10px rgba(#000, 0.3);
       }
@@ -312,7 +316,7 @@ body {
 }
 
 .page__meta-sep::before {
-  content: "\2022";
+  content: '\2022';
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
@@ -455,7 +459,7 @@ body {
 
 .comment {
   @include clearfix();
-  padding-top : 2em;
+  padding-top: 2em;
 
   &:not(:last-child) {
     border-bottom: 1px solid $border-color;
@@ -551,9 +555,9 @@ body {
 /* 2022.01.20 wide pages use for lifelog */
 .wide {
   .page {
-    width:100%;
-    float:inherit;
-    
+    width: 100%;
+    float: inherit;
+
     @include breakpoint($large) {
       padding-right: 0;
       /* 2022.01.20 add padding-left */
@@ -580,7 +584,7 @@ body {
       line-height: 1.5;
       font-size: $type-size-2;
       text-align: center;
-    
+
       & + .page__meta {
         margin-top: -0.5em;
         font-size: $type-size-6;

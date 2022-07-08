@@ -1,9 +1,9 @@
 ---
-title: "Etc"
+title: "ETC"
 layout: category
 permalink: /categories/etc/
 author_profile: true
-taxonomy: Etc
+taxonomy: ETC
 sidebar:
   nav: "categories"
 ---
