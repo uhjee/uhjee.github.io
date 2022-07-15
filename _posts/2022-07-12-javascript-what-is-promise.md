@@ -33,87 +33,105 @@ javascript는 <u>싱글 스레드</u>로 동작합니다. Heap, Call stack, Even
 
 비동기 흐름을 제어하기 위해 **콜백 함수**를 주로 사용합니다. 하지만 로직이 복잡해질수록 콜백의 콜백, 콜백의 콜백의 콜백 같은 기괴한 흐름이 생기곤 합니다.
 
-예를 들어 보도록 하겠습니다. 예제에서는 총 2번의 비동기 요청을 보내겠습니다.
+예를 들어 보도록 하겠습니다. 예제에서는 총 3번의 비동기 요청을 보내겠습니다.
 
-1. 로그인 :  `loginUser({ id, password } , onSuccess, onError)`
-2. role 가져오기:   `getRoles(user, onSuccess, onError)`
+1. 과일이 맞는지 확인
+1. 사과가 맞는지 확인
+1. 빨간색인지 확인
 
-각각의 메소드들은 비동기 처리를 구현하기 위해 `setTimeout` 함수를 사용하여 2초 뒤에 실행됩니다. 
-
-`loginUser` 메소드와 `getRoles` 메소드 모두 첫 번째 파라미터가 특정 조건에 해당하면, 두 번째 파라미터이자 콜백함수인 `onSuccess`를 호출하고, 조건에 해당하지 않는다면 세 번째 파라미터이자 콜백함수인 `onError`를 호출합니다. 
+각각의 메소드들은 비동기 처리를 구현하기 위해 `setTimeout` 함수를 사용하여 1초 뒤에 실행됩니다. 
 
 아래는 **"선언"** 부분 입니다.
 
 ```javascript
-class UserStorage {
-  //* 파라미터로 받은 id와 password가 정상이라면 onSuccess 아니라면 onError
-  loginUser({ id, password } , onSuccess, onError) {
-    setTimeout(() => {
-      if (id === 'uhjee' && password === '0000') {
-        onSuccess(id);
-      } else {
-        onError(new Error('not found'));
-      }
-    }, 2000);
-  }
-  //* 파라미터 user가 정상이면 onSuccess 아니라면 onError
-  getRoles(user, onSuccess, onError) {
-    setTimeout(() => {
-      if (user === 'uhjee') {
-        onSuccess({ name: 'uhjee', role: 'admin' });
-      } else {
-        onError(new Error('no access'));
-      }
-    }, 2000);
-  }
-}
+// Provider
+const isFruit = (fruit, callback1, callback2) => {
+  setTimeout(() => {
+    if (['apple', 'orange', 'banana'].includes(fruit.name)) {
+      callback1(fruit);
+    } else {
+      callback2();
+    }
+  }, 1000);
+};
+
+const isApple = (fruit, callback1, callback2) => {
+  setTimeout(() => {
+    if (fruit.name === 'apple') {
+      callback1(fruit);
+    } else {
+      callback2();
+    }
+  }, 1000);
+};
+
+const isRedApple = (color, callback1, callback2) => {
+  setTimeout(() => {
+    if (color === 'red') {
+      callback1(color);
+    } else {
+      callback2();
+    }
+  }, 1000);
+};
 ```
 
 아래는 **"호출"** 부분입니다. 다음의 흐름대로 처리됩니다.
 
-1. `loginUser` 메소드를 호출하며, 성공했을 경우 `getRoles` 호출
-2. 각각 실패했을 경우, 에러 로그 발생
-
 ```javascript
-const userStorage = new UserStorage(); // instance 생성
+// Consumer
+const apple = {
+  name: 'apple',
+  color: 'black',
+};
 
-const id = 'uhjee';
-const password = '0000';
-
-userStorage.loginUser({ id, password },
-  // callback 1! loginUser의 onSuccess
-  (user) => {
-    userStorage.getRoles(
-      user,
-      // callback 1-1! getRoles의 onSuccess
-      (userWithRole) => {
-        console.log(
-          `Hello ${userWithRole.name}, you have a ${userWithRole.role} role`,
+isFruit(
+  apple,
+  // callback 1-1
+  (fruit) => {
+    console.log('과일이라고 합니다.');
+    isApple(
+      fruit,
+      // callback 2-1
+      (apple) => {
+        console.log('사과라고 합니다.');
+        isRedApple(
+          apple.color,
+          // callback 3-1
+          (color) => {
+            console.log(`${color} 사과가 맞아요.`);
+          },
+          // callback 3-2
+          () => {
+            console.log('빨간 색이 아니에요.');
+          },
         );
       },
-      // callback 1-2! getRoles의 onError
-      (error) => {
-        console.log(error);
+      // callback 2-2
+      () => {
+        console.log('사과가 아니래요.');
       },
     );
   },
-  // callback 2! loginUser의 onError
-  (error) => {
-    console.log(error);
+  // callback 1-2
+  () => {
+    console.log('과일이 아니래요.');
   },
+);
+
 ```
 
-위와 같이 총 4번의 콜백 함수를 작성해야 합니다. 콜백 함수의 콜백 함수로 작성하기 때문에 코드의 indent가 점점 가운데로 들어갔다가 다시 나오게 됩니다.( `>` 모양)
+위와 같이 총 6번의 콜백 함수를 작성해야 합니다. 콜백 함수의 콜백 함수로 작성하기 때문에 코드의 indent가 점점 가운데로 들어갔다가 다시 나오게 됩니다.( `>` 모양) 또 메인이 되는 로직이 오른쪽 안쪽으로 밀려나게 되어 가독성이 떨어집니다.
 
-콜백 함수가 다른 콜백 함수를 갖는 상황이 끊임 없이 이어진다면, 비동기 코드의 호출 부분에서의 코드 가독성이 상당히 떨어지게 됩니다. 하지만 ECMAScript 6부터 **Promise 객체**가 추가되면서 비동기 호출 부분에서의 콜백 지옥 문제가 해결되었습니다. 
+이처럼 콜백 함수가 다른 콜백 함수를 갖는 상황이 끊임 없이 이어진다면, 호출 부분에서의 가독성이 상당히 떨어지게 됩니다. 하지만 ECMAScript 6부터 **Promise 객체**가 추가되면서 비동기 호출 부분에서의 콜백 지옥 문제가 해결되었습니다. 
 
 ## 📌 Promise는 무엇인가?
 
 Promise 객체는 <u>비동기 작업을 실행하고, 그 처리가 끝난 결과(상태)에 따라 어떠한 처리를 실행하겠다는 약속을 제공</u>합니다.
 
-Promise 객체를 **선언부(Provider)**와 **호출부(Consumer)**로 나누어 접근하면 이해가 더욱 쉽습니다. 우선 아래는 **Promise 객체의 선언부**입니다. 
+Promise 객체를 **선언부(Provider)**와 **호출부(Consumer)**로 나누어 접근하면 이해하기 더욱 쉽습니다. 우선 아래는 **Promise 객체의 선언부**입니다. 
 
-### Promise 객체 선언부 - Provider
+### 선언부 - Provider
 
 ```javascript
 // Promise 선언부
@@ -126,8 +144,6 @@ const promise1 = new Promise((resolve, reject) => {
 })
 ```
 
-
-
 Promise 객체는 생성자 파라미터로 함수를 받습니다. 이 함수는 최초로 실행되는 비동기 코드입니다. 이 함수의 실행 결과에 따라 `resolve`, `reject` 를 호출하게 됩니다.
 
 executor 함수의 인자로 받는 `resolve`, `reject` 에 대해 이야기하기 위해서는 Promise의 상태에 대해 이해해야 합니다. **Promise의 상태(State)** 는 총 3가지가 있습니다.
@@ -136,14 +152,14 @@ executor 함수의 인자로 받는 `resolve`, `reject` 에 대해 이야기하�
 2. <u>이행</u> (fulfilled) : 로직이 성공한 상태
 3. <u>거부</u> (rejected): 로직이 실패한 상태
 
-executor의 실행 결과에 따라 아래와 같이 상태가 변경됩니다.
+executor의 실행 결과에 따라 `resolve`, `reject` 함수를 호출하고, 아래와 같이 상태가 변경됩니다. `resolve` 함수는 파라미터로 데이터를 전달할 수 있습니다. 이 데이터는 상태가 변경된 후 호출되는 콜백함수의 파라미터로 전달됩니다.
 
-- 로직 성공:  `resolve()` 호출 -> 이행 상태
+- 로직 성공:  `resolve(다음 처리로 전달할 데이터)` 호출 -> 이행 상태
 - 로직 실패:  `reject()` 호출 -> 거부 상태
 
 위와 같이 상태가 대기에서 이행 또는 거부로 변경될 경우, **executor의 비동기 처리가 종료**됩니다. 이후 promise 객체의 상태에 따라 후처리를 담당하는 메소드가 달라집니다. 호출부에서 자세히 살펴볼게요.
 
-### Promise 객체 호출부 - Consumer
+### 호출부 - Consumer
 
 ```javascript
 // Promise 선언부
@@ -156,7 +172,7 @@ const promise1 = new Promise((resolve, reject) => {
 })
 
 // Promise 호출부
-promise1.then((executor함수의 결과) => {
+promise1.then((resolve함수의 파라미터) => {
     // 상태가 '이행'되었을 때의 후 처리 코드
 }).catch((e) => {
     // 상태가 '거부'되었을 때의 후 처리 코드
@@ -167,9 +183,17 @@ promise1.then((executor함수의 결과) => {
 
 호출부의 코드는 메소드체이닝 형식으로 작성됩니다. (promise 객체의 `then()` 과 `catch()` 메소드 모두 다시 Promise 객체를 반환하기 때문에 가능)
 
-- `then()`: 상태가 **이행**되었을 경우, 후 처리 코드
+- `then()`: 상태가 **이행**되었을 경우, 후 처리 코드 / `then()`은 인자로 함수를 받는데, 이 함수는 resolve() 함수의 파라미터를 인자로 받습니다. 따라서 상태가 변경되기 전의 데이터를 받아서 사용할 수 있습니다.
+
+  > 두 번째 인자로 rejected 되었을 때의 콜백함수를 받을 수 있습니다. 이 경우 아래의 `catch()`문 대신 '거부' 상태의 처리를 진행할 수 있습니다.
+
 - `catch()`: 상태가 **거부**되었을 때의 후 처리 코드
+
 - `finally()`: // 상태가 **이행** 또는 **거부**일 때의 후 처리 코드
+
+
+
+
 
 
 비동기 요청이 미래에 맞이할 상태를 대변한다.
@@ -260,8 +284,6 @@ getHen() //
     console.log(res);
   });
 ```
-
-# callback to promise!
 
 ### callback 함수로 작성된 async 관리
 
@@ -363,11 +385,8 @@ userStorage //
 
 
 
-[[출처 ]dream-ellie/learn-javascript](https://github.com/dream-ellie/learn-javascript/blob/master/notes/async/promise.js)
+## **📚 출처**
 
-- 선언과 호출의 분리를 기억하자...
-- then 내부 콜백함수의 인자:  이전 then 의 return 값 또는 이전 promise 객체의  resolve()의 인자
+[dream-ellie/learn-javascript](https://github.com/dream-ellie/learn-javascript/blob/master/notes/async/promise.js)
 
-
-
-https://tangoo91.tistory.com/42
+[자바스크립트 비동기 처리와 AJAX, promise](https://tangoo91.tistory.com/42)
