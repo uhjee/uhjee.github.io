@@ -1,9 +1,9 @@
 ---
-title: "Linux"
+title: "Nest.js"
 layout: category
-permalink: /categories/linux/
+permalink: /categories/nest/
 author_profile: true
-taxonomy: Linux
+taxonomy: node
 sidebar:
   nav: "categories"
 ---

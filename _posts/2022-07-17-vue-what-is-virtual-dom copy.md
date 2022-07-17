@@ -40,7 +40,7 @@ DOM(Document Object Model) 은 HTML document를 객체 기반적으로 추상화
 
 위의 HTML document는 다음의 DOM Tree로 표현할 수 있다.
 
-![img_dom_tree.png](/assets/images/posts_img/virtual-dom/img_dom_tree.png)
+![img_dom_tree.png](/assets/images/posts_img/virtual-dom/img_dom_tree.png){: .align-center}
 
 만약 `li` 중 첫 번째 `li`의 textContent 를 'list item one' 으로 변경하고 싶다면, 우리는 새로운 element를 생성하고, element에 textContent attribute를 추가해야 하며, 마지막으로 DOM elements를 교체(update)해야 한다. DOM API를 사용해 다음과 같은 코드를 작성해야 할 것이다.
 
@@ -75,11 +75,11 @@ list.innerHTML = `
 
 Virtual DOM은 실제 DOM의 copy 개념이다. 이 copy는 실제 DOM API를 호출하지 않고, 빈번하게 조작 및 변경된다. 모든 변경이 Virtual DOM 에 반영이 된 후, 실제 DOM을 효율적으로 변경한다.
 
-![img_dom_tree.png](/assets/images/posts_img/virtual-dom/img_dom_tree.png)
+![img_dom_tree.png](/assets/images/posts_img/virtual-dom/img_dom_tree.png){: .align-center}
 
 위의 DOM tree를 JS Object로 표현한다면 다음과 같다.
 
-```jsx
+~~~jsx
 const vdom = {
   tagName: 'html',
   children: [
@@ -102,7 +102,7 @@ const vdom = {
     }, // end body
   ],
 }; // end html
-```
+~~~
 
 위의 JS Object를 Virtual DOM이라 생각하면 된다. JS Object이기 때문에 실제 DOM API의 호출 없이 자유롭게 조작하고 update할 수 있다.
 

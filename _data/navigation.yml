@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "Home"
+  - title: 'Home'
     url: https://uhjee.github.io/
 
-  - title: "About"
+  - title: 'About'
     url: /about/
 
-  - title: "GitHub"
+  - title: 'GitHub'
     url: https://github.com/uhjee
 
   # - title: "Projects"
@@ -17,17 +17,21 @@ main:
 
 # sidebar navigation (categories)
 categories:
-  - title: "React"
+  - title: 'React'
     url: /categories/react/
-  - title: "Vue"
+  - title: 'Vue'
     url: /categories/vue/
-  - title: "Javascript"
+  - title: 'Javascript'
     url: /categories/javascript/
-  - title: "Typescript"
-    url: /categories/typescript/    
-  - title: "Web"
+  - title: 'Typescript'
+    url: /categories/typescript/
+  - title: 'Web'
     url: /categories/web/
-  - title: "Algorithm"
+  - title: 'Node.js'
+    url: /categories/node/
+  - title: 'Nest.js'
+    url: /categories/nest/
+  - title: 'Algorithm'
     url: /categories/algorithm/
-  - title: "ETC"
+  - title: 'ETC'
     url: /categories/etc/
