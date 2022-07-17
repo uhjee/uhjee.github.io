@@ -50,7 +50,7 @@ for (let i=0; i<10; i++) {
 
 **Expression**은 '수식'이라는 뜻으로, 그 자체가 <u>하나의 값을 수렴(reduce)되어 표현</u>될 수 있는 코드를 말합니다. 즉 Expression은 평가(evaluate)가 가능하기 때문에 하나의 '값'으로 반환될 수 있다는 것을 의미합니다.<br/>
 
-> **e.g. 값식, 연산식, 호출식**
+> **e.g. 값식, 연산식, 호출식, JSX**
 
 ```js
 // 아래의 식은 모두 하나의 값을 반환합니다.
@@ -61,6 +61,7 @@ a + b;
 arr[2];
 'string'.toUpperCase();
 (() => console.log('happy'))(); // 호출식; IIFE;  undefined 반환
+<div>행복은 대체로 멀리있습니다.</div> // JSX 역시 표현식
 ```
 
 - 호출식: javascript는 모든 함수가 호출될 때 값을 반환합니다. (`undefined`, `null`)
