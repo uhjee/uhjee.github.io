@@ -20,8 +20,6 @@ last_modified_at: 2022-07-17
 
 Node.js는 크롬 V8 javascript 엔진으로 빌드된 **javascript 런타임**입니다.
 
-## 📌 Javascript 런타임이란?
-
 Javascript 런타임이란 <u>javascript를 실행시킬 수 있는 환경</u>을 말합니다.
 
 기존에는 javascript 엔진이 있는 브라우저에서만 javascript 실행이 가능했었습니다. 하지만 2008년에 구글이 V8 엔진을 개발하고 오픈 소스로 코드를 공개했습니다. 이를 기반으로 라이언 달 선생님이 Node.js를 개발했습니다.
@@ -30,7 +28,7 @@ Javascript 런타임이란 <u>javascript를 실행시킬 수 있는 환경</u>�
 
 ![eventloop_001.png](/assets/images/posts_img/node/eventloop_001.png){: .align-center}
 
-위 그림과 같이 Node.js는 V8 javascsript 엔진과 Libuv 라이브러리를 기반으로 구성되어 있습니다. 그리고 노드는 우리가 작성한 코드를 V8 엔진, Libuv 라이브러리와 연결시켜 줍니다.
+위 그림과 같이 Node.js는 V8 javascript 엔진과 Libuv 라이브러리를 기반으로 구성되어 있습니다. 우리가 작성한 코드는 Node.js가  V8 엔진, Libuv 라이브러리와 연결시켜 실행시키게 됩니다.
 
 Libuv 라이브러리의 역할은 다음과 같고, 이 역할들은 곧 Node.js의 중요한 특성이 됩니다.
 
