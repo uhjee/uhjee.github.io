@@ -19,7 +19,7 @@
 
   @include breakpoint($large) {
     float: left;
-    width: calc(#{$left-sidebar-width-narrow} - 1em);
+    width: calc(#{$left-sidebar-width-narrow} - 5em);
 
     &.sticky {
       overflow-y: auto;
@@ -32,7 +32,7 @@
   }
 
   @include breakpoint($x-large) {
-    width: calc(#{$left-sidebar-width} - 1em);
+    width: calc(#{$left-sidebar-width} - 5em);
 
   }
 

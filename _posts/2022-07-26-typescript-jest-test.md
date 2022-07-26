@@ -38,8 +38,9 @@ jest가 보다 간결한 테스트 코드를 작성할 수 있다는 것이 그 
    $ npx ts-jest config:init
    ```
 
-3. 편리한 사용을 위해 script에 작성합니다.
+3. 편리한 사용을 위해 package.json의 script에 작성합니다.
    ```json
+   // package.json
    ...
    "scripts": {
      // ./test/test.ts 사용
@@ -53,7 +54,7 @@ jest가 보다 간결한 테스트 코드를 작성할 수 있다는 것이 그 
 테스트의 대상이 될 `add` 함수와, `range` 함수를 구현해보았습니다.
 `add` 는 단순히 입력받은 값을 더해 반환하는 함수이고, `range` 는 첫 번째 인자로부터 두 번째 인자까지 1씩 더해가며 배열로 반환해주는 함수입니다.
 
-```ts
+```typescript
 // ./src/index.ts
 
 export const add = (a: number, b: number): number => a + b;
