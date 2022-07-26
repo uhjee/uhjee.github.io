@@ -556,7 +556,15 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: $type-size-4;
+  font-size: $type-size-5;
+
+  @include breakpoint($small) {
+    font-size: $type-size-6;
+  }
+
+  @include breakpoint($medium) {
+    font-size: $type-size-5;
+  }
 
   @include breakpoint($large) {
     font-size: $type-size-6;

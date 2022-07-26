@@ -36,20 +36,24 @@ body {
 }
 
 .page {
+  @include breakpoint($medium) {
+    margin: 0 2em;
+  }
+
   @include breakpoint($large) {
     float: right;
 
     width: calc(100% - #{$left-sidebar-width-narrow});
     padding-right: $right-sidebar-width-narrow;
     /* 2022.01.19 gap between sidebar and page */
-    padding-left: 3em;
+    padding-left: 2em;
   }
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$left-sidebar-width});
     padding-right: $right-sidebar-width;
     /* 2022.01.19 gap between sidebar and page */
-    padding-left: 3em;
+    padding-left: 2em;
   }
 
   .page__inner-wrap {
@@ -91,7 +95,7 @@ body {
 }
 
 .page__content {
-  font-size: 0.88em;
+  font-size: 1em;
   font-weight: normal;
   color: $text-color;
 
