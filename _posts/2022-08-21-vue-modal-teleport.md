@@ -23,9 +23,11 @@ vue를 사용해 서비스를 구현할 때에는 컴포넌트라는 단위로 �
 
 그리고 vue는 우리가 작성한 컴포넌트 구조를 바탕으로 DOM tree를 구성하게 됩니다. 따라서 구조상 하위에 있는 컴포넌트는 자신보다 상위의 컴포넌트나 형제 컴포넌트에 접근해 간단한 상호작용이  상당히 까다롭습니다. event bus, vuex 또는 소위 props drilling이라 불리는 구조에 따라 줄줄이 props를 전달해야 하는 상황에 직면하게 됩니다.
 
-Teleport는 컴포넌트 트리 구조와 관계 없이 자신이 원하는 DOM 위치에서 렌더링을 하고, 조작할 수 있는 기술입니다. react에서는 portal이라는 단어로 표현됩니다. teleport와 portal 모두 표현하고자 하는 의미가 비슷합니다. 
+**Teleport**는 컴포넌트 트리 구조와 관계 없이 자신이 원하는 DOM 위치에서 렌더링을 하고, 조작할 수 있는 기술입니다. react에서는 portal이라는 단어로 표현됩니다. teleport와 portal 모두 표현하고자 하는 의미가 비슷합니다. 
 
 간단한 모달을 만들어 vue에서 portal을 사용하는 방법을 알아보도록 하겠습니다.
+
+아래에서 사용한 코드는 모두 제 [github](https://github.com/uhjee/TIL/tree/master/vue/vue3-teleport)에서 보실 수 있습니다.
 
 ## ⚙️ 개발 환경
 
@@ -44,10 +46,11 @@ teleport를 사용해 하위의 자식 컴포넌트에서 간단한 모달을 �
 index.html
 
 ```html
-	<!--  ...-->
+// index.html
+  <!--  ...-->
   <body>
     <div id="app"></div>
-		<!-- teleport는 여기 달라 붙습니다!-->
+	<!-- teleport는 여기 달라 붙습니다!-->
     <div id="modal-destination"></div>
   </body>
 </html>
@@ -57,7 +60,7 @@ index.html
 
 컴포넌트 구조는 최대한 단순화해서 아래와 같이 구성하도록 하겠습니다. ChildComp 에서 MyModal 컴포넌트를 갖고 있습니다. MyModal 컴포넌트는 위에 작성한 element에 붙어 렌더링되도록 구현하겠습니다.
 
-가독성을 위해  `<style>` 는 제외하고 작성하도록 하겠습니다. style을 포함한 코드는 여기에 있습니다.
+가독성을 위해  `<style>` 는 제외하고 작성하도록 하겠습니다. style을 포함한 코드는 [github](https://github.com/uhjee/TIL/tree/master/vue/vue3-teleport)에 있습니다.
 
 🚨 아래 트리는 vue 개발자 도구에서 보이는 컴포넌트 구조입니다. 실제 프로젝트 구조가 아닙니다!
 
@@ -69,7 +72,7 @@ index.html
 
 ```
 
-### ChildComp.vue
+#### ChildComp.vue
 
 ```jsx
 // ChildComp.vue
@@ -107,7 +110,7 @@ const isOpenModal = ref<boolean>(false);
 
 `MyModal` 에서는 `isOpenModal`, `title` 이라는 props를 받아줘야 하고, slot을 통해 모달 내용이 표현되도록 처리해야 합니다.
 
-### MyModal.vue
+#### MyModal.vue
 
 ```jsx
 // MyModal.vue
@@ -151,7 +154,7 @@ MyModal 컴포넌트를 범용적으로 사용하기 위해 title을 props로, c
 
  추가로  자신을 사용하는 컴포넌트에서  `isOpenModal` 을 비활성화하도록  `close` 이벤트를 발행합니다.
 
-### ParentComp.vue
+#### ParentComp.vue
 
 컴포넌트 구조를 보다 깊게 가져가기 위해서 작성한 컴포넌트입니다. 단순히 `ChildComp` 컴포넌트만 갖고 있습니다.
 
@@ -169,7 +172,7 @@ import ChildComp from "@/components/ChildComp";
 </script>
 ```
 
-### 렌더링 확인
+#### 렌더링 확인
 
 ![vue-teleport-modal__00.png](/assets/images/posts_img/vue/vue-teleport-modal__00.png)
 
