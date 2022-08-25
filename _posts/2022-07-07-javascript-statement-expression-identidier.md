@@ -4,7 +4,7 @@ excerpt: '문? 식? 식별자? 혼용하던 개념을 살펴봅니다.'
 
 
 categories:
-  - Javascript
+  - javascript
 tags:
   - [Javascript, JS, js]
 

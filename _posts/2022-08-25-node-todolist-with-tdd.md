@@ -3,11 +3,11 @@ title: '[Nest.js, Jest] Nest.js with TDD(1) - Controller'
 excerpt: 'TDD를 통해 todolist 로직 생성하기 - 컨트롤러 편'
 
 categories:
-- Node
+- nest
 tags:
-- [Typescript, test, unit test, jest, ts, nest, nest.js, TDD, spyOn, mocking, controller, service, mock, module]
+- [Typescript, node, test, unit test, jest, ts, nest, nest.js, TDD, spyOn, mocking, controller, service, mock, module]
 
-permalink: /node/nestjs-with-tdd-controller/
+permalink: /nest/nestjs-with-tdd-controller/
 
 toc: true
 toc_sticky: true
@@ -197,7 +197,7 @@ jest의 `spyOn()`을 통해 fn()으로만 선언해두었던 서비스의 `creat
 
 그리고 Nest.js 각 레이어들의 메소드의 다수가 `Promise<>` 객체를 반환하는 일이 잦습니다. 잊지말고 `expect()` 함수 뒤에 `rejects`, `resolves` 을 붙여주세요.
 
-![controller_test_with_error](/assets/images/posts_img/node/controller_test_with_error.png)
+![controller_test_with_error](/assets/images/posts_img/nest/controller_test_with_error.png)
 열심히 달려왔지만 속상하게도 위와 같이 수많은 에러가 발생합니다. 이 에러는 대부분 우리가 아직 구현하지 않아 발생한 에러들이기 때문에 구현을 하며 이 에러를 처리하도록 하겠습니다.
 
 ### 컨트롤러 구현

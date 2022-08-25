@@ -3,7 +3,7 @@ title: '[Typescript, Jest] Typescript를 Jest로 테스트 작성'
 excerpt: 'Typescript와 Jest를 사용해 간단한 함수의 테스트를 진행해보았습니다.'
 
 categories:
-  - Typescript
+  - typescript
 tags:
   - [Typescript, test, unit test, jest, ts]
 

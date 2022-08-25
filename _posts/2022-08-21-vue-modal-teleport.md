@@ -3,7 +3,7 @@ title: '[Vue3, Teleport] Teleport를 사용해 모달 만들기'
 excerpt: 'Vue3의 Teleport를 사용해 full-screen 모달을 만들어보았습니다.'
 
 categories:
-  - Vue
+  - vue
   
 tags:
   - [Typescript, Vue, teleport, composition api, vue3, modal]

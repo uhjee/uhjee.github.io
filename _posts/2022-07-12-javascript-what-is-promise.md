@@ -3,7 +3,7 @@ title: '[Javascript] 비동기 처리를 위한 Promise란 무엇인가'
 excerpt: '헷갈리기 쉬운 Promise 객체에 대해 알아봅니다.'
 
 categories:
-  - Javascript
+  - javascript
 tags:
   - [Javascript, JS, js, 콜백지옥, Promise, then, catch, Promise.all]
 

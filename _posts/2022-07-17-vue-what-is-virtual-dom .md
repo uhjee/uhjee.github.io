@@ -3,7 +3,7 @@ title: '[Vue] Virtual DOM은 대체 무엇인가'
 excerpt: 'SPA Framework에서 요긴하게 사용하고 있는 Virual DOM에 대해 알아봅니다.'
 
 categories:
-  - Vue
+  - vue
 tags:
   - [Vue, Virtual dom, react]
 

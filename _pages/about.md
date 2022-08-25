@@ -6,7 +6,7 @@ comments: false
 ---
 
 <div>
-    <img src="../assets/images/me_photo.jpeg" alt="about_meee" width="70%" min-width="700px" itemprop="image">
+    <img src="../assets/images/404_image.png" alt="about_meee" width="30%" min-width="300px" itemprop="image">
 </div>
 
 

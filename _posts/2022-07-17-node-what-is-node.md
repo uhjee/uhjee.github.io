@@ -3,7 +3,7 @@ title: '[Node.js] Node.js란?'
 excerpt: 'Javascript 런타임, Node.js에 대해서 알아봅시다.'
 
 categories:
-  - Node
+  - node
 tags:
   - [Node.js, Node, node, nodejs, runtime]
 

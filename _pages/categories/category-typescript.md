@@ -3,7 +3,7 @@ title: "Typescript"
 layout: category
 permalink: /categories/typescript/
 author_profile: true
-taxonomy: Typescript
+taxonomy: typescript
 sidebar:
   nav: "categories"
 ---

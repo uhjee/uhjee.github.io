@@ -3,7 +3,7 @@ title: '[Markdown] 블로그 내 POST 작성 예제'
 excerpt: '첫 글입니다. 축하해주세요.'
 
 categories:
-  - ETC
+  - etc
 tags:
   - [markdown, md, blog]
 
