@@ -54,7 +54,7 @@ last_modified_at: 2022-08-25
 
 먼저 테스트 코드에서 자주 쓰일 데이터들을 mocking해두도록 하겠습니다. 별도의 `mock-todo.ts` 파일을 생성해 작성하도록 하겠습니다. 이 데이터들은 테스트 코드에서 자주 호출되며, 더미 데이터 역할을 담당합니다.
 
-- `makeMockCreateTodoDto`: createTodoDto의 mocking 데이터를 반환
+- `makeMockCreateTodoDto`: `createTodoDto`의 mocking 데이터를 반환합니다.
 
   ```typescript
   /* src/todos/specs/mock-todo.ts */
@@ -64,7 +64,7 @@ last_modified_at: 2022-08-25
   });
   ```
 
-- `makeMockTodo`: todo entity의 mocking 데이터를 반환  
+- `makeMockTodo`: `todo entity`의 mocking 데이터를 반환  
 
    (함수 내부에서 시간 선언을 하면 시간 차이 때문에 테스트를 실패하는 경우가 있기 때문에 함수 밖으로 밀어냅니다.)
 
