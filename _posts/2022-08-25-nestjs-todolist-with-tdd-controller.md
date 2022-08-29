@@ -234,7 +234,7 @@ export class TodosController {
 @Injectable()
 export class TodosService {
   async createTodo(createTodoDto: CreateTodoDto) {
-    return new Promise(() => {}); // 프로미스 객체 리턴
+    return await Promise.resolve(); // 프로미스 객체 리턴
   }
 }
 ```
