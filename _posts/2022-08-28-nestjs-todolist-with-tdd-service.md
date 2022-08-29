@@ -70,10 +70,10 @@ describe('TodosService', () => {
 
 `createTodo()`에 대한 테스트 케이스는 다음과 같이 정리하겠습니다.
 
-- 정확한 값과 함께 Todoservice의 createTodo를 호출해야한다.
-- TodoService가 예외를 던지면, 별도의 처리없이 처리없이 던져야 한다.
-- 파라미터로 받는 createTodoDto의 속성에 값이 빈 문자열일 경우, '[key[, key]]가 없습니다.'라는 메세지를 가진 에러를 발생시켜야 한다.
-- 성공 시, 생성된 Todo를 반환한다.
+- 정확한 값과 함께 `Todoservice`의 `createTodo`를 호출해야한다.
+- `TodoService`가 예외를 던지면, 별도의 처리없이 처리없이 던져야 한다.
+- 파라미터로 받는 `createTodoDto`의 속성에 값이 빈 문자열일 경우, '[key[, key]]가 없습니다.'라는 메세지를 가진 에러를 발생시켜야 한다.
+- 성공 시, 생성된 `Todo`를 반환한다.
 
 
 ```typescript
@@ -227,37 +227,41 @@ export class TodoRepository extends Repository<Todo> {
 },
 ```
 
-테스트 목적에 맞춰서 다양한 스크립트를 사용할 수 있습니다. 우리는 상세 정보를 볼 수 있는  `test:watch` 스크립트를 사용하도록 하겠습니다. 터미널을 열고 스크립트를 실행합니다.
+테스트 목적에 맞춰서 다양한 스크립트를 사용할 수 있습니다. 우리는 상세 정보를 볼 수 있는  `test:watch` 스크립트를 사용하도록 하겠습니다. 터미널을 열고 스크립트를 실행합니다. 
+
+이 커맨드는 jest가 관리하는 프로젝트 전체의 테스트 코드를 실행하므로, 이번에는 `todos.service.spec.ts` 파일만 실행시켜보도록 하겠습니다.
 
 ```sh
-$ npm run test:watch ./
+$ npx jest --watch ./src/todos/specs/todos.service.spec.ts    
 ```
 
-테스트가 정상적으로 진행됐고, 너무나도 다행히 결과도 모두 성공한 것을 확인할 수 있습니다.
+모든 테스트가 정상적으로 실행된 것을 알 수 있습니다.
 
-![controller_test_result_script](/assets/images/posts_img/nest/controller_test_result_script.png)
+![service_test_result_script](/assets/images/posts_img/nest/service_test_result_script.png)
 
 #### 2. 에디터 내장 테스트
 
 저는 webstorm 을 사용하고 있기 때문에 webstorm 기준으로 작성하겠습니다.
 
-`todos.controller.spec.ts` 파일을 열고 메뉴의 `Run` > `Run 'todos.controller.spec.ts'` 를 클릭합니다. 단축키는 `⌃` + `r` 라고 알려줍니다.
+`todos.service.spec.ts` 파일을 열고 메뉴의 `Run` > `Run 'todos.service.spec.ts'` 를 클릭합니다. 단축키는 `⌃` + `r` 라고 알려줍니다.
 
-![controller_test_run_editor](/assets/images/posts_img/nest/controller_test_run_editor.png)
+![service_test_run_editor](/assets/images/posts_img/nest/service_test_run_editor.png)
 
 또 테스트 케이스 별로 실행 시키기 위해서는 line 표시 우측에 실행 버튼을 클릭하셔도 됩니다. 이 단축키는 커서가 해당 테스트 케이스에 존재한 상태에서 `⌃` + `⇧` +  `r` 를 입력하시면 됩니다.
 
 하단의 `Run` 탭에 테스트 결과가 나타납니다. 마찬가지로 테스트가 정상적으로 진행됐고, 결과도 모두 성공인 것을 알 수 있습니다.
 
-![controller_test_result_editor](/assets/images/posts_img/nest/controller_test_result_editor.png)
+![service_test_result_editor](/assets/images/posts_img/nest/service_test_result_editor.png)
 
 
 
 ## 📌 결론
 
-지금까지 nest.js에서 컨트롤러 테스트를 진행하는 방법을 알아봤습니다. TDD의 3단계인 리팩토링은 진행하지 못했지만, 실패하는 테스트 코드를 먼저 작성하고, 이를 통과할 수 있도록 컨트롤러를 구현했습니다.
+지금까지 nest.js에서 서비스 테스트를 진행해보았습니다. 예제로 작성한 코드가 복잡한 코드가 아니기 때문에, 실무에서는 mocking 작업도 테스트 코드도 훨씬 복잡해지겠지만, 테스트 코드를 미리 작성하면서 개발하고자 하는 로직에 대해 더 깊고 넓게 생각할 수 있는 경험을 얻었습니다.
 
-다음 포스트에서는 서비스의 테스트 케이스를 작성하고, 이를 구현해보도록 하겠습니다.
+앞으로 사이드 프로젝트에서 다양한 테스트 코드를 작성해보고, 나아가 실무에서도 작성할 수 있도록 해보겠습니다.
+
+긴 글 읽어주셔서 감사합니다.
 
 
 
