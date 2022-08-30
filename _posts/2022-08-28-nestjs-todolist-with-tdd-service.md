@@ -24,13 +24,14 @@ last_modified_at: 2022-08-28
 
 하단의 코드는 모두 [여기](https://github.com/uhjee/TIL/tree/master/nest_js/nest-tdd)에서 보실 수 있습니다.
 
+
 ## 📌 서비스 테스트 
 
 `nest g service todos`를 통해 서비스를 생성하신 분들은 `todos.service.spec.ts`라는 파일이 이미 생성되어 있겠지만, 그렇지 않으신 분들은 `todos.service.spec.ts` 파일을 생성합니다.
 
 서비스에서는 레포지토리 레이어에 대한 의존성을 주입받기 때문에 이 관계를 끊고자, 모듈 mocking을 하며 동시에 레포지토리도 mocking하도록 하겠습니다.
 
-### 모듈 및 레포지토리 Mocking
+### 모듈 및 레포지토리 Mockup
 
 ```typescript
 /* todos.controller.spec.ts */
@@ -127,6 +128,7 @@ describe('TodosService', () => {
 ```
 
 
+내부에서 사용하는  `makeMockTodo()`, `makeMockCreateTodoDto()`는 컨트롤러 테스트 진행 시 만들어 놓은 함수입니다. [이 포스트](https://uhjee.github.io/nest/nestjs-with-tdd-controller/)에서 확인하실 수 있습니다.
 
 서비스 테스트 코드를 작성했습니다. 컨트롤러 테스트 코드와 마찬가지로 jest의 `spyOn()`을 통해 fn()으로만 선언해두었던 서비스의 `createTodo()`를 케이스 별로 mocking했습니다. 실제 `createTodo()`는  promise를 반환하기 때문에 이에 유의하며 코드를 작성합니다.
 
@@ -257,7 +259,9 @@ $ npx jest --watch ./src/todos/specs/todos.service.spec.ts
 
 ## 📌 결론
 
-지금까지 nest.js에서 서비스 테스트를 진행해보았습니다. 예제로 작성한 코드가 복잡한 코드가 아니기 때문에, 실무에서는 mocking 작업도 테스트 코드도 훨씬 복잡해지겠지만, 테스트 코드를 미리 작성하면서 개발하고자 하는 로직에 대해 더 깊고 넓게 생각할 수 있는 경험을 얻었습니다.
+지금까지 nest.js에서 서비스 테스트를 진행해보았습니다. 예제로 작성한 코드가 복잡한 코드가 아니기 때문에, 실무에서는 mocking 작업도 테스트 코드도 훨씬 복잡해지겠지만, 테스트 코드를 미리 작성하면서 개발하고자 하는 로직에 대해 더 깊고 넓게 생각할 수 있는 경험을 얻었습니다. 
+
+TDD가 익숙해지면 개발해야 할 기능에 대해 명확하게 이해할 수 있고, 각 함수들의 역할과 책임에 대해 효율적으로 분리할 수 있을 것이라 생각됩니다.
 
 앞으로 사이드 프로젝트에서 다양한 테스트 코드를 작성해보고, 나아가 실무에서도 작성할 수 있도록 해보겠습니다.
 

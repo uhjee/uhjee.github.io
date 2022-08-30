@@ -50,7 +50,7 @@ last_modified_at: 2022-08-25
 
 
 
-## 📌 Mocking
+## 📌 파라미터 및 반환값 Mockup
 
 먼저 테스트 코드에서 자주 쓰일 데이터들을 mocking해두도록 하겠습니다. 별도의 `mock-todo.ts` 파일을 생성해 작성하도록 하겠습니다. 이 데이터들은 테스트 코드에서 자주 호출되며, 더미 데이터 역할을 담당합니다.
 
@@ -88,7 +88,7 @@ Toto를 생성하는 API 핸들러에 대한 테스트입니다.
 
 `nest g ~~~`  커맨드를 통해 컨트롤러를 생성하셨다면, `~~controller.spec.ts` 라는 파일이 함께 생성됩니다. 테스트 전에 컨트롤러의 로직에만 집중할 수 있도록 우선 module과 service를 Mocking해 의존성을 끊어주도록 하겠습니다.
 
-### 모듈 및 서비스 Mocking
+### 모듈 및 서비스 Mockup
 
 ```typescript
 /* todos.controller.spec.ts */
