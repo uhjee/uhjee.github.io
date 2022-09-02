@@ -136,10 +136,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "49fa688245c2d995",
+  "active": "86be0436b3dd7dc8",
   "lastOpenFiles": [
-    "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
     "_posts/algorithm/2022-09-02-algorithm-10-cars.md",
+    "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
     "obsidian_templates/blog_post_template.md",
     "assets/images/404_image.png",
     "_posts/algorithm/2022-08-30-algorithm-lets-make-stack.md"
