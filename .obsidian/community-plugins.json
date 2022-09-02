@@ -1,4 +1,7 @@
 [
   "obsidian-git",
-  "table-editor-obsidian"
+  "table-editor-obsidian",
+  "calendar",
+  "dataview",
+  "templater-obsidian"
 ]
