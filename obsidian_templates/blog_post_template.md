@@ -1,6 +1,6 @@
 ---
-title: '[Typescript, Data Structure] Queue 자료 구조 구현하기'
-excerpt: 'Queue을 typescript로 직접 구현하며 이해하려 노력해봅니다.'
+title: ''
+excerpt: ''
 
 categories:
   - algorithm
@@ -18,7 +18,7 @@ tags:
       data structure,
     ]
 
-permalink: /algorithm/lets-make-queue/
+permalink: /test/test/
 
 toc: true
 toc_sticky: true
