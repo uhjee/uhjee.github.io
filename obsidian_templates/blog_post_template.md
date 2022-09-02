@@ -25,7 +25,7 @@ toc_sticky: true
 
 date: <% tp.date.now("YYYY-MM-DD") %>
 
-last_modified_at: <% tp.date.now("YYYY-MM-DD") %>
+%%last_modified_at: <% tp.date.now("YYYY-MM-DD") %>%%
 ---
 
 
