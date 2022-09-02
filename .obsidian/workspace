@@ -1,0 +1,143 @@
+{
+  "main": {
+    "id": "77ddc18347a83a4f",
+    "type": "split",
+    "children": [
+      {
+        "id": "4ab05824e320fe19",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3f2f8d4b398fcc4d",
+    "type": "split",
+    "children": [
+      {
+        "id": "35ff42cf4302caf2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "49fa688245c2d995",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ea924fa707009319",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6dc80be58376a2a4",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7795046d2a2bcbca",
+    "type": "split",
+    "children": [
+      {
+        "id": "e429d1ff851663d9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0a02cf336246d6dd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cba1e16730e78c40",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b84ee5877bb76497",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f760fbadfae836fa",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md"
+              }
+            }
+          },
+          {
+            "id": "86be0436b3dd7dc8",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "4ab05824e320fe19",
+  "lastOpenFiles": [
+    "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md"
+  ]
+}
