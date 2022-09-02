@@ -19,7 +19,7 @@ last_modified_at: 2022-07-07
 
  실무에서 코드에 대해 이야기 할 때, '조건문, 반복문, 조건식' 등의 표현들을 구분하며 이야기하는 것처럼 느껴지지 않았습니다. 더 이상 혼용하지 않기 위해서 <u>Statement</u>, <u>Expression</u>, <u>Identifier</u> 에 대해 리마인드할 겸 적어보려 합니다.
 
-## 📌 Statement: 문
+## <strong>#</strong> Statement: 문
 
 
 **Statement**는 '진술', '서술'이란 뜻으로, 실행가능한(executable) 최소한의 독립적인 코드 조각을 말합니다. javascript 엔진(인터프리터, 다른 언어에서는 주로 컴파일러)에게 주는 <u>힌트</u>로 메모리에 데이터가 남지 않는다는 점이 특징입니다..  문법적으로 해당 언어에 적합한 모든 코드와 블록은 statement라고 볼 수 있습니다. 따라서 statement는 주로 한 개 이상의 expression과 프로그래밍 키워드를 포함한 경우가 많습니다.<br>
@@ -46,7 +46,7 @@ for (let i=0; i<10; i++) {
 
 **Sync Flow**는 명령어가 메모리에 적재되어 순차적으로 수행되는 흐름을 말하며, runtime에서 프로그래머는 저 흐름에 간섭할 수 없습니다. 이러한 흐름을 미리 제어하기 위해 제어문 등을 사용합니다.
 
-## 📌 Expression: 식
+## <strong>#</strong> Expression: 식
 
 **Expression**은 '수식'이라는 뜻으로, 그 자체가 <u>하나의 값을 수렴(reduce)되어 표현</u>될 수 있는 코드를 말합니다. 즉 Expression은 평가(evaluate)가 가능하기 때문에 하나의 '값'으로 반환될 수 있다는 것을 의미합니다.<br/>
 
@@ -68,7 +68,7 @@ arr[2];
 
 
 
-## 📌 Identifier: 식별자
+## <strong>#</strong> Identifier: 식별자
 
 변수 중 하나. 메모리 주소의 별칭.
 

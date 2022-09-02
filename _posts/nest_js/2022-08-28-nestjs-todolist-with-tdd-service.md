@@ -25,13 +25,13 @@ last_modified_at: 2022-08-28
 하단의 코드는 모두 [여기](https://github.com/uhjee/TIL/tree/master/nest_js/nest-tdd)에서 보실 수 있습니다.
 
 
-## 📌 서비스 테스트 
+## <strong>#</strong> 서비스 테스트 
 
 `nest g service todos`를 통해 서비스를 생성하신 분들은 `todos.service.spec.ts`라는 파일이 이미 생성되어 있겠지만, 그렇지 않으신 분들은 `todos.service.spec.ts` 파일을 생성합니다.
 
 서비스에서는 레포지토리 레이어에 대한 의존성을 주입받기 때문에 이 관계를 끊고자, 모듈 mocking을 하며 동시에 레포지토리도 mocking하도록 하겠습니다.
 
-### 모듈 및 레포지토리 Mockup
+### <strong>##</strong> 모듈 및 레포지토리 Mockup
 
 ```typescript
 /* todos.controller.spec.ts */
@@ -67,7 +67,7 @@ describe('TodosService', () => {
 
 테스트 대상이 아닌 레포지토리는 Mock up하도록 하겠습니다. providers의 `TodoRepository`를 상단에 작성한 `MockTodoRepository`로 대체합니다.  `MockTodoRepository` 는 `createTodo` 메소드의 mocking 함수를 갖고 있도록 작성했습니다.
 
-### 서비스 테스트 코드
+### <strong>##</strong> 서비스 테스트 코드
 
 `createTodo()`에 대한 테스트 케이스는 다음과 같이 정리하겠습니다.
 
@@ -137,7 +137,7 @@ describe('TodosService', () => {
 ![service_test_with_error](/assets/images/posts_img/nest/service_test_with_error.png)
 아직 서비스를 구현하지 않아, 위와 같이 오류가 발생합니다. 에러가 발생하지 않도록, 테스트 코드를 정상적으로 실행시킬 수 있도록 서비스를 구현해봅시다.
 
-### 서비스 구현
+### <strong>##</strong> 서비스 구현
 
 이전 포스트에서 아래와 같이 `todos.service.ts` 의 코드를 작성했습니다. 실제 로직은 없고, 단순히 파라미터와 Promise 리턴 값만 갖는 껍데기입니다.
 
@@ -209,7 +209,7 @@ export class TodoRepository extends Repository<Todo> {
 
 이제 다시 확인을 해보면 `todos.service.spec.ts` 의 에러가 사라졌습니다. 모든 에러를 없앴으므로 서비스 테스트 코드를 실행시켜봅니다.
 
-### 서비스 테스트 코드 실행
+### <strong>##</strong> 서비스 테스트 코드 실행
 
 테스트 코드를 실행시키는 방법은 크게 아래와 같이 2가지로 분류할 수 있습니다.
 
@@ -257,7 +257,7 @@ $ npx jest --watch ./src/todos/specs/todos.service.spec.ts
 
 
 
-## 📌 결론
+## <strong>#</strong> 마무리
 
 지금까지 nest.js에서 서비스 테스트를 진행해보았습니다. 예제로 작성한 코드가 복잡한 코드가 아니기 때문에, 실무에서는 mocking 작업도 테스트 코드도 훨씬 복잡해지겠지만, 테스트 코드를 미리 작성하면서 개발하고자 하는 로직에 대해 더 깊고 넓게 생각할 수 있는 경험을 얻었습니다. 
 
