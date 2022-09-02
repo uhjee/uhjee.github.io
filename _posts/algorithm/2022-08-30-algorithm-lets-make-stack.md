@@ -28,7 +28,7 @@ last_modified_at: 2022-08-30
 
 <u>Learning JavaScript Data Structures and Algorithms 한국어판</u> 라는 책을 보며 공부한 내용에 대해 정리하도록 하겠습니다.
 
-해당 서적의 예제는 javascript로 작성되어 있기 때문에 이해하기는 편했습니다. 하지만 읽는 동안 자료구조 및 알고리즘과 같이 강타입이 어울리는 주제와는 조금 동떨어진 것 같다는 느낌을 떨칠 수 없었습니다. 따라서 제 포스트에서는 typescript로 각 자료구조, 알고리즘을 구현하며 이해해보도록 하겠습니다.
+해당 서적의 예제는 javascript로 작성되어 있기 때문에 이해하기 무척 편했습니다. 하지만 읽는 동안 자료구조 및 알고리즘과 같이 강타입이 어울리는 주제와 물렁한 javascript가 잘 어울리지 않는다는 느낌을 떨칠 수 없었습니다. 따라서 제 포스트에서는 typescript로 각 자료구조, 알고리즘을 구현하며 이해해보도록 하겠습니다.
 
 하단의 코드는 모두 [여기](https://github.com/uhjee/TIL/tree/master/data-structure/typescript)에서 자세히 보실 수 있습니다.
 

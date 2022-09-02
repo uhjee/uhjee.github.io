@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4ab05824e320fe19",
+        "id": "b8a089b91f778d72",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md"
-              }
+              "state": {}
             }
           },
           {
@@ -136,8 +128,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "4ab05824e320fe19",
+  "active": "b8a089b91f778d72",
   "lastOpenFiles": [
-    "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md"
+    "assets/images/404_image.png",
+    "_posts/algorithm/2022-09-01-algorithm-lets-make-queue.md",
+    "_posts/algorithm/2022-08-30-algorithm-lets-make-stack.md"
   ]
 }
