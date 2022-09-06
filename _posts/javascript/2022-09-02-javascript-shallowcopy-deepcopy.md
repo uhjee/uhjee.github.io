@@ -1,6 +1,6 @@
 ---
 title: '[Javascript] 얕은 복사와 깊은 복사 (Shallow copy & Deep copy)'
-excerpt: ''
+excerpt: 'Object type의 얕은 복사와 깊은 복사를 알아봅시다.'
 
 categories:
   - javascript
