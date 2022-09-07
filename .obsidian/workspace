@@ -146,15 +146,15 @@
   },
   "active": "50e26d6349d39f54",
   "lastOpenFiles": [
-    "_posts/javascript/2022-09-02-javascript-shallowcopy-deepcopy.md",
+    "_posts/etc/2022-07-05-etc-markdown-example.md",
     "_posts/javascript/2022-09-05-javascript-var-let-const-TDZ.md",
+    "_posts/javascript/2022-09-02-javascript-shallowcopy-deepcopy.md",
     "assets/images/post_img/javascript/tdz.md",
     "_posts/node/2022-07-17-node-what-is-node.md",
     "obsidian_templates/blog_post_template.md",
     "_posts/typescript/2022-07-26-typescript-jest-test.md",
     "_posts/nest_js/2022-08-28-nestjs-todolist-with-tdd-service.md",
     "_posts/nest_js/2022-08-25-nestjs-todolist-with-tdd-controller.md",
-    "_posts/javascript/2022-07-12-javascript-what-is-promise.md",
-    "_posts/javascript/2022-07-07-javascript-statement-expression-identidier.md"
+    "_posts/javascript/2022-07-12-javascript-what-is-promise.md"
   ]
 }
